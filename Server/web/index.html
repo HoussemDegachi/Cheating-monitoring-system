@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMS</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Icon -->
+    <link rel="icon" type="image/jpeg" href="favicon.ico">
+</head>
+
+<body>
+    <header>
+        <figure id="icon">
+            <img src="favicon.ico" alt="CMS icon" class="animated-camera">
+        </figure>
+
+        <h1 id="title">CMS</h1>
+    </header>
+
+    <main>
+        <div id="list-box">
+
+
+        </div>
+        <div class="show">
+            <section id="cam">
+
+                <figure id="cam-container">
+                    <img id="live-cam" />
+                    <p id="cam-info" class="hidden">Initializing automatic mode</p>
+                </figure>
+                <div id="settings">
+                    <h2>Settings</h2>
+                    <div class="settings-options">
+                        <div class="settings-mode">
+
+                            <div class="settings-option">
+                                <input type="radio" name="recording" id="norec" value="norec" checked>
+                                <label for="norec">No-Recording</label>
+                            </div>
+                            <div class="settings-option">
+                                <input type="radio" name="recording" id="rec" value="rec">
+                                <label for="rec">Recording</label>
+                            </div>
+                        </div>
+                        <div class="settings-mode">
+
+                            <div class="settings-option">
+                                <input type="radio" name="mode" id="manual" value="manual" checked>
+                                <label for="manual">Manual</label>
+                            </div>
+                            <div class="settings-option">
+                                <input type="radio" name="mode" id="automatic" value="automatic">
+                                <label for="automatic">Automatic</label>
+                            </div>
+                        </div>
+                        <input type="range" min="30" max="150" name="currDeg" id="currDeg" value="90" step="30">
+                        <output id="currDegDisp">90</output>
+                    </div>
+                </div>
+                <button id="btn--reconnect" class="hidden">Reconnect</button>
+            </section>
+        </div>
+    </main>
+
+    <div id="error" class="hidden">
+        <div id="error-box">
+            <h2>An error occured!</h2>
+            <p id="error-box--description"></p>
+            <div id="btns">
+                <button id="btn--try-again">Try again</button>
+                <button id="btn--exit">Exit</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/eel.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
